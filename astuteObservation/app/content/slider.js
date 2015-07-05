@@ -5,6 +5,7 @@
     var starterContentRight = $('#starter-content-right-bottom');
     var contentLeft = $('#content-left-top');
     var contentRight = $('#content-right-bottom');
+    var aoTitle = $('#ao-title');
     var leftPanelOpen = false;
     var rightPanelOpen = false;
     var shadeLeft,
@@ -30,8 +31,11 @@
         heightPercentageTemp,
         heightWindow,
         windowUpperLimit,
-        windowLowerLimit;
+        windowLowerLimit,
+        toggleBack;
 
+    //// Code for touch. Working, but not all bugs worked out
+    // Initial touch
     $('#container-left-top, #container-right-bottom').on('mousedown touchstart', function (e) {
         e.preventDefault();
         dragging = true;
@@ -39,6 +43,7 @@
         startY = getY(e);
     });
 
+    // Action during move
     $('#container-left-top, #container-right-bottom').on('mousemove touchmove', function (e) {
         if (dragging) {
             endX = getX(e);
@@ -47,6 +52,7 @@
             $('#container-left-top').css('-webkit-transition', 'none');
             $('#container-right-bottom').css('-webkit-transition', 'none');
 
+            // If landscape adjust width, else if potrait mode adjust height
             if ($(window).width() > 900) {
                 widthLeftTop = $('#container-left-top').width();
                 widthTemp = widthLeftTop - endX;
@@ -115,13 +121,13 @@
         endY = getY(e);
 
         if (endX === startX && endY === startY) {
-            if (this.id === 'container-left-top') {
+            if (this.id === 'container-left-top' && !leftPanelOpen) {
                 shadeLeft();
             }
-            else if (this.id === 'container-right-bottom') {
+            else if (this.id === 'container-right-bottom' && !rightPanelOpen) {
                 shadeRight();
             }
-            
+
         }
     });
 
@@ -159,36 +165,41 @@
         }
     }
 
+    // When toggling a panel, this code contains removing various containers and
+    // setting timeouts to ensure no clicking can be done while the transition is
+    // happening
     toggleHidden = function (content) {
         if (content.hasClass('util-hide')) {
             content.addClass('anim-fade-in').removeClass('anim-fade-out');
             timeoutSet = true;
-            setTimeout(function() {
+            setTimeout(function () {
                 content.removeClass('util-hide');
             }, 500);
             // Removes from DOM to fix scroll-bar from appearing.
             // Added after visibility toggle to ensure smooth transition
-            setTimeout(function() {
+            setTimeout(function () {
                 content.css('display', 'block');
+                aoTitle.css('display', 'block');
             }, 501);
             // Stops additional clicks during animation
-            setTimeout(function() {
+            setTimeout(function () {
                 timeoutSet = false;
             }, 600);
         }
         else {
             content.addClass('anim-fade-out').removeClass('anim-fade-in');
             timeoutSet = true;
-            setTimeout(function() {
+            setTimeout(function () {
                 content.addClass('util-hide');
             }, 500);
             // Removes from DOM to fix scroll-bar from appearing
             // Added after visibility toggle to ensure smooth transition
-            setTimeout(function() {
+            setTimeout(function () {
                 content.css('display', 'none');
+                aoTitle.css('display', 'none');
             }, 501);
             // Stops additional clicks during animation
-            setTimeout(function() {
+            setTimeout(function () {
                 timeoutSet = false;
             }, 600);
         }
@@ -226,4 +237,10 @@
             $('#container-left-top, #container-right-bottom').css('width', '');
         }
     }
+
+    toggleBack = function () {
+
+    }
+
+
 })();

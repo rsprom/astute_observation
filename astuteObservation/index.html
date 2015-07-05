@@ -4,44 +4,109 @@
     <title>Astute Observation</title>
     <meta name="viewport" content="width=device-width, user-scalable=no" />
 
-    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-
     <!-- JS Files -->
     <script src="scripts/jquery-1.9.1.js"></script>
     <script src="scripts/bootstrap.js"></script>
 
-    <!-- AngularJS -->
-    <script src="scripts/angular.js"></script>
-    <script src="scripts/angular-animate.js"></script>
-    <script src="scripts/angular-mocks.js"></script>
-    <script src="scripts/angular-route.js"></script>
-
     <!-- Custom CSS -->
+    <link href="Content/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link href="app/content/custom.css" rel="stylesheet" />
 </head>
 <body>
     <div class="site-container">
-        <div class="astute-observation-container absolute-center">
+        <div id="ao-title" class="astute-observation-container absolute-center">
             <p class="astute-observation-text">astute observation</p>
         </div>
         <div id="container-left-top" class="container-main">
             <div id="starter-content-left-top" class="starter-content">
-                <span class="horizontal-text">This is the left</span>
-                <span class="vertical-text">This is the top</span>
+                <span>Resume</span>
             </div>
             <div id="content-left-top" class="content-container util-hide util-none">
-                <span>Nothing here yet!</span>
+                <div id="resume" class="container">
+                    <div id="resume-header">
+                        <h1>Ritchie Prom</h1>
+                        <h2>Software Developer</h2>
+                        <p>ritchie.prom@gmail.com</p>
+                    </div>
+                    <div id="resume-objective">
+                        <h3>Objective</h3>
+                        <p>
+                            Seeking a junior to mid-level programming position that
+                            will continue to expand and challenge my current knowledge
+                            of the software development field.
+                        </p>
+                    </div>
+                    <div id="resume-languages">
+                        <h3>Languages</h3>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h4>Proficient Knowledge</h4>
+                                <div class="col-md-6 text-left">
+                                    <p>C#</p>
+                                    <p>JavaScript</p>
+                                    <p>HTML5</p>
+                                    <p>CSS3</p>
+                                </div>
+                                <div class="col-md-6 text-left">
+                                    <p>AngularJS</p>
+                                    <p>JQuery</p>
+                                    <p>Bootstrap</p>
+                                    <p>LESS/SASS</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <h4>Working Knowledge</h4>
+                                <div class="col-md-12 text-left">
+                                    <p>SQL</p>
+                                    <p>Java</p>
+                                    <p>Node.JS</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <h4>Frameworks & Other</h4>
+                                <div class="col-md-6 text-left">
+                                    <p>.NET 4.5</p>
+                                    <p>MVC</p>
+                                    <p>MVVM</p>
+                                    <p>ASP.NET</p>
+                                    <p>Razor Syntax</p>
+                                </div>
+                                <div class="col-md-6 text-left">
+                                    <p>Responsive Design</p>
+                                    <p>IndexedDB</p>
+                                    <p>SOLID</p>
+                                    <p>Agile</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="resume-application">
+                        <h3>Application Experience</h3>
+                    </div>
+                    <div id="resume-work">
+                        <h3>Work Experience</h3>
+                    </div>
+                    <div id="resume-projects">
+                        <h3>Projects</h3>
+                    </div>
+                    <div id="resume-education">
+                        <h3>Education Experience</h3>
+                    </div>
+                </div>
             </div>
         </div>
         <div id="container-right-bottom" class="container-main">
             <div id="starter-content-right-bottom" class="starter-content">
-                <span class="content horizontal-text">This is the right</span>
-                <span class="content vertical-text">This is the bottom</span>
+                <span >Projects</span>
             </div>
             <div id="content-right-bottom" class="content-container util-hide util-none">
                 <span>Nothing here yet!</span>
             </div>
         </div>
+    </div>
+    <div id="back-button">
+        <p><i class="fa fa-long-arrow-left"></i><span class="util-mobile-hidden"> Back</span></p>
     </div>
     <script src="app/content/slider.js"></script>
 </body>

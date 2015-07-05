@@ -1,4 +1,7 @@
-﻿$primary-color: #111111;
+﻿@import url(http://fonts.googleapis.com/css?family=Montserrat:700);
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
+$primary-color: #111111;
 $secondary-color: #000000;
 $primray-font-color: #FFFFFF;
 $li-anim: .7s;
@@ -21,12 +24,19 @@ $li-anim: .7s;
     -webkit-transition: opacity 1s ease-in-out;
 }
 
+/* Utilities */
 .util-hide {
     visibility: hidden;
 }
 
 .util-none {
     display: none;
+}
+
+.util-mobile-hidden {
+    @media (max-width: 768px) {
+        display: none;
+    }
 }
 
 .anim-fade-in {
@@ -37,6 +47,7 @@ $li-anim: .7s;
     -webkit-animation: fadeOut .5s linear;
 }
 
+/* General */
 html, body {
     overflow-x: hidden;
     height: 100%;
@@ -47,12 +58,16 @@ html, body {
     color: $primray-font-color;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
 ul {
     list-style-type: none;
 }
 
-/*Common*/
-
+/* Custom */
 .astute-observation {
     &-container {
         width: 60%;
@@ -79,7 +94,7 @@ ul {
     }
 }
 
-.nav-fonts{
+.nav-fonts {
     text-align: right;
     color: white;
     font-size: 20px;
@@ -164,7 +179,7 @@ ul {
     @include content-horizontal-center;
     padding-top: 5%;
     padding-bottom: 5%;
-    width: 50%;
+    width: 100%;
 
     @media (max-width: 900px) {
         font-size: .8em;
@@ -172,6 +187,34 @@ ul {
     }
 }
 
+#back-button {
+    position: absolute;
+    z-index: 50;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+
+    p {
+        background-color: #2EA141;
+        padding: 10px;
+        border-radius: 25px;
+    }
+}
+
+
+
+/* Resume */
+#resume {
+    h3 {
+        text-decoration: underline;
+    }
+
+    p {
+        color: #c4c4c4;
+    }
+}
+
+/* Keyframes */
 @-webkit-keyframes fadeOut {
     0% {
         opacity: 1;
