@@ -57,6 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\ritchiepromresume.pdf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -80,6 +81,7 @@
     <Content Include="Content\images\icons\ico-ssms.png" />
     <Content Include="Content\images\icons\ico-tortoise.png" />
     <Content Include="Content\images\icons\ico-vs.png" />
+    <Content Include="Content\images\projects.jpg" />
     <Content Include="Content\images\wood-coffee-iphone-notebook.jpg" />
     <Content Include="Content\style.css">
       <DependentUpon>style.less</DependentUpon>

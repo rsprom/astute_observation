@@ -205,10 +205,11 @@ a.button {
         z-index: 5;
         background-image: url('images/wood-coffee-iphone-notebook.jpg');
         background-size: cover;
+        background-position: center;
     }
 
     .container-fluid {
-        position: fixed;
+        position: relative;
         width: 100%;
         height: 750px;
         z-index: 10;
@@ -223,6 +224,10 @@ a.button {
         .container {
             position: relative;
             top: 50%;
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
 
             @media only screen and (max-width: 992px) {
@@ -327,6 +332,18 @@ a.button {
     height: 500px;
     color: #FFFFFF;
 
+    @media only screen and (max-width: 1200px) {
+        height: 850px !important;
+
+        .background-overlay {
+            height: 850px !important;
+        }
+
+        .container-fluid {
+            height: 850px !important;
+        }
+    }
+
     .background-overlay {
         width: 100%;
         height: 500px;
@@ -335,7 +352,7 @@ a.button {
         z-index: 5;
         background-image: url('images/computercloseup.jpg');
         background-size: cover;
-        background-position: 0 500px;
+        background-position: bottom;
     }
 
     .container-fluid {
@@ -364,23 +381,30 @@ a.button {
     }
 }
 
-#work {
+#work, #education {
     font-size: 1.3em;
 
     .timeline-block {
         border-radius: 5px;
         margin: 10px;
         font-weight: 300;
-        margin: 20px 0;
 
         .timeline-block-content {
             float: right;
             width: 80%;
             border-left: 3px solid @primary-color;
+
+            @media only screen and (max-width: 767px) {
+                width: 95%;
+            }
         }
 
         .timeline-block-time {
             float: left;
+
+            @media only screen and (max-width: 767px) {
+                margin-left: -15px;
+            }
         }
     }
 
@@ -390,6 +414,95 @@ a.button {
 }
 
 #portfolio {
+    height: 600px;
+    color: #FFFFFF;
+
+    @media only screen and (max-width: 1200px) {
+        height: 950px !important;
+
+        .background-overlay {
+            height: 950px !important;
+        }
+
+        .container-fluid {
+            height: 950px !important;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        height: 1000px !important;
+
+        .background-overlay {
+            height: 1000px !important;
+        }
+
+        .container-fluid {
+            height: 1000px !important;
+        }
+    }
+
+    .background-overlay {
+        width: 100%;
+        height: 600px;
+        position: absolute;
+        top: 0;
+        z-index: 5;
+        background-image: url('images/projects.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .container-fluid {
+        position: relative;
+        width: 100%;
+        height: 600px;
+        z-index: 10;
+        background: #b7b7b7; /* Old browsers */
+        background: -moz-linear-gradient(left, rgba(121, 208, 173, 0.5) 0%, rgba(0, 0, 0, 0.90) 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(121, 208, 173, 0.5)), color-stop(100%,rgba(0, 0, 0, 0.90))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(left, rgba(121, 208, 173, 0.5) 0%,rgba(0, 0, 0, 0.90) 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(left, rgba(121, 208, 173, 0.5) 0%,rgba(0, 0, 0, 0.90) 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(left, rgba(121, 208, 173, 0.5) 0%,rgba(0, 0, 0, 0.90) 100%); /* IE10+ */
+        background: linear-gradient(to right, rgba(121, 208, 173, 0.5) 0%,rgba(0, 0, 0, 0.90) 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(121, 208, 173, 0.5)', endColorstr='rgba(0, 0, 0, 0.90)',GradientType=1 ); /* IE6-9 */
+        .container {
+            position: relative;
+            top: 50%;
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+    }
+
+    a {
+        color: #FFFFFF !important;
+    }
+
+    .project {
+        padding: 30px;
+
+        @media only screen and (max-width: 1200px) {
+            padding: 10px;
+        }
+    }
+
+    .project:nth-child(1) {
+        @media only screen and (max-width: 992px) {
+            border-right: none;
+        }
+    }
+
+    .project:nth-child(2), .project:nth-child(3), .project:nth-child(4) {
+        @media only screen and (max-width: 992px) {
+            border-top: 1px solid #e0e0e0;
+        }
+    }
+}
+
+.label.label-default {
+    background-color: @primary-color;
 }
 
 #education {
@@ -399,6 +512,15 @@ section .container-fluid {
     height: 60%;
     padding-top: 100px;
     padding-bottom: 100px;
+}
+
+footer {
+    color: #FFFFFF;
+    background-color: black;
+    position: relative;
+    z-index: 20;
+    text-align: center;
+    padding: 20px;
 }
 /* Bootstrap Overrides
 ================================================= */
