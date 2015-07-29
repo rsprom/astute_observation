@@ -99,6 +99,10 @@ h4 {
 .f-c-white {
   color: white;
 }
+a.active {
+  background-color: #ff4d4d !important;
+  color: #FFFFFF !important;
+}
 /* Custom
 ================================================= */
 nav {
@@ -109,6 +113,9 @@ nav a.button {
   padding: 5px 20px;
 }
 nav #navbar-download {
+  -moz-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  -webkit-transition: all .2s linear;
   transition: all .2s linear;
 }
 section {
@@ -118,6 +125,7 @@ section {
 }
 a.button {
   opacity: 1;
+  border-radius: 250px;
   border: solid 2px #FFFFFF;
   color: #FFFFFF;
   margin: 10px 0;
@@ -153,9 +161,8 @@ a.button:focus {
 #objective .container-fluid {
   position: fixed;
   width: 100%;
-  height: 100%;
+  height: 750px;
   z-index: 10;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b7b7b7+0,000000+100 */
   background: #b7b7b7;
   /* Old browsers */
   background: -moz-linear-gradient(left, rgba(104, 104, 104, 0.5) 0%, rgba(0, 0, 0, 0.9) 100%);
@@ -172,7 +179,7 @@ a.button:focus {
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(104, 104, 104, 0.50)', endColorstr='rgba(0, 0, 0, 0.90)', GradientType=1);
   /* IE6-9 */
-  padding: 250px 0;
+  padding: 250px 0 0;
 }
 #objective h1 {
   font-size: 5em;
@@ -213,22 +220,76 @@ a.button:focus {
 #about {
   height: 60%;
 }
-#languages {
-  height: 60%;
+#about .profile-image {
+  margin: 15px auto;
+  height: 200px;
+  width: 200px;
+  background-image: url('images/305057_3837958260309_1496616734_n.jpg');
+  background-position: -9px -11px;
+  border-radius: 350px;
+  background-size: 110%;
+}
+#about .label.label-default {
+  background-color: #ff4d4d;
+}
+#languages i.fa {
+  font-size: 30px;
+  padding: 5px;
+  color: #ff4d4d;
+}
+#languages ul {
+  list-style-type: none;
+}
+#languages ul i.fa {
+  font-size: 20px;
+  padding-right: 15px;
 }
 #applications {
-  height: 60%;
+  height: 500px;
+  color: #FFFFFF;
 }
-#work {
-  height: 60%;
+#applications .background-overlay {
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  z-index: 5;
+  background-image: url('images/computercloseup.jpg');
+  background-size: cover;
+  background-position: 0 500px;
 }
-#portfolio {
-  height: 60%;
+#applications .container-fluid {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  z-index: 10;
+  background: #b7b7b7;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, rgba(158, 158, 158, 0.5) 0%, rgba(0, 0, 0, 0.9) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(158, 158, 158, 0.5)), color-stop(100%, rgba(0, 0, 0, 0.9)));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, rgba(158, 158, 158, 0.5) 0%, rgba(0, 0, 0, 0.9) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, rgba(158, 158, 158, 0.5) 0%, rgba(0, 0, 0, 0.9) 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, rgba(158, 158, 158, 0.5) 0%, rgba(0, 0, 0, 0.9) 100%);
+  /* IE10+ */
+  background: linear-gradient(to right, rgba(158, 158, 158, 0.5) 0%, rgba(0, 0, 0, 0.9) 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(158, 158, 158, 0.5) ', endColorstr='rgba(0, 0, 0, 0.90)', GradientType=1);
+  /* IE6-9 */
 }
-#education {
-  height: 60%;
+#applications ul {
+  list-style-type: none;
+}
+#applications .icon {
+  height: 35px;
+  width: 35px;
+  margin: 10px;
 }
 section .container-fluid {
+  height: 60%;
   padding-top: 100px;
   padding-bottom: 100px;
 }
@@ -239,14 +300,20 @@ section .container-fluid {
   background-color: transparent;
   border: 0;
   font-size: 20px;
+  -moz-transition: background-color 0.2s linear;
+  -o-transition: background-color 0.2s linear;
+  -webkit-transition: background-color 0.2s linear;
   transition: background-color 0.2s linear;
 }
 .navbar-default.solid {
   background-color: #000000 !important;
+  -webkit-box-shadow: -1px -14px 3px 14px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px -14px 3px 14px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px -14px 3px 14px rgba(0, 0, 0, 0.75);
 }
 .navbar-default .navbar-brand {
   color: #000000;
-  background-color: #FF4D4D;
+  background-color: #ff4d4d;
 }
 .navbar-default .navbar-nav > li > a {
   color: #FFFFFF;

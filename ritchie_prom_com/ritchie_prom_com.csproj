@@ -69,6 +69,16 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\305057_3837958260309_1496616734_n.jpg" />
+    <Content Include="Content\images\computercloseup.jpg" />
+    <Content Include="Content\images\icons\ico-android.png" />
+    <Content Include="Content\images\icons\ico-cmd.png" />
+    <Content Include="Content\images\icons\ico-eclipse.png" />
+    <Content Include="Content\images\icons\ico-github.png" />
+    <Content Include="Content\images\icons\ico-linqpad.png" />
+    <Content Include="Content\images\icons\ico-ssms.png" />
+    <Content Include="Content\images\icons\ico-tortoise.png" />
+    <Content Include="Content\images\icons\ico-vs.png" />
     <Content Include="Content\images\wood-coffee-iphone-notebook.jpg" />
     <Content Include="Content\style.css">
       <DependentUpon>style.less</DependentUpon>

@@ -11,12 +11,12 @@
     <link href="Content/style.css" rel="stylesheet" />
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
-<body>
+<body id="top">
     <div class="section-wrapper">
         <nav id="site-navbar" class="navbar navbar-default navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand text-uppercase">
+                    <a href="#top" class="navbar-brand text-uppercase">
                         <b>Ritchie<span class="f-c-white">Prom</span></b> (DotCom)
                     </a>
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false">
@@ -24,14 +24,15 @@
                     </button>
                 </div>
                 <div class="navbar-collapse collapse" id="nav-collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="menuItem"><a class="large" href="#about">About Me</a></li>
-                        <li class="menuItem"><a class="large" href="#languages">Languages</a></li>
-                        <li class="menuItem"><a class="large" href="#applications">Applications</a></li>
-                        <li class="menuItem"><a class="large" href="#work">Work</a></li>
-                        <li class="menuItem"><a class="large" href="#portoflio">Portfolio</a></li>
-                        <li class="menuItem"><a class="large" href="#education">Education</a></li>
-                    </ul>
+                    <div id="menu-container">
+                        <ul class="nav navbar-nav">
+                            <li class="menu-item"><a class="large" href="#aboutme">About Me & Languages</a></li>
+                            <li class="menu-item"><a class="large" href="#applications">Application Experience</a></li>
+                            <li class="menu-item"><a class="large" href="#work">Work</a></li>
+                            <li class="menu-item"><a class="large" href="#portfolio">Portfolio</a></li>
+                            <li class="menu-item"><a class="large" href="#education">Education</a></li>
+                        </ul>
+                    </div>
                     <div id="navbar-download">
                         <a class="button pull-right display-hidden" href="#">Download Resume</a>
                     </div>
@@ -61,76 +62,124 @@
                 </div>
             </div>
         </header>
-        <section id="about">
+        <section id="aboutme">
             <div class="container-fluid">
-                <div class="container">
-                <p>Hello there!</p>
-                </div>
-            </div>
-        </section>
-        <section id="languages">
-            <div class="container-fluid">
-                <div class="container">
-                    <h2>Languages</h2>
+                <div class="container ">
                     <div class="row">
-                        <div class="col-md-4">
-                            <h3>Proficient Knowledge</h3>
-                            <ul>
-                                <li>C#</li>
-                                <li>JavaScript</li>
-                                <li>HTML5</li>
-                                <li>CSS3</li>
-                                <li>LESS</li>
-                                <li>Bootstrap</li>
-                                <li>AngularJS</li>
-                            </ul>
+                        <div id="about" class="col-md-3">
+                            <!-- ABOUT ME -->
+                            <h1 class="text-uppercase thin-font">About Me</h1>
+                            <hr />
+                            <div class="profile-image"></div>
+                            <p class="text-center large thin-font">
+                                I'm a self-taught software developer with a focus on web development and front-end development.
+                            </p>
+                            <p class="larger"><span class="label label-default">Name</span> <span class="pull-right thin-font">Ritchie Prom</span></p>
+                            <p class="larger"><span class="label label-default">Location</span> <span class="pull-right thin-font">Phoenix, AZ</span></p>
+                            <p class="larger"><span class="label label-default">Phone/E-mail</span> <span class="pull-right thin-font">See Resume</span></p>
+
                         </div>
-                        <div class="col-md-4">
-                            <h3>Working Knowledge</h3>
-                            <ul>
-                                <li>SQL</li>
-                                <li>Java</li>
-                                <li>Android SDK</li>
-                                <li>Node.JS</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4">
-                            <h3>Frameworks and Other</h3>
-                            <ul>
-                                <li>.NET 4.5</li>
-                                <li>MVVM</li>
-                                <li>MVC</li>
-                                <li>LINQ</li>
-                                <li>ASP.NET</li>
-                                <li>Razor Syntax</li>
-                                <li>Responsive Design</li>
-                                <li>IndexedDB</li>
-                                <li>Agile Development</li>
-                                <li>Team Foundation Server (TFS)</li>
-                            </ul>
+                        <div id="languages" class="col-md-9">
+                            <!-- LANGUAGES -->
+                            <h1 class="text-uppercase thin-font">Things I Know</h1>
+                            <hr />
+                            <div class="largest thin-font">
+                                <div class="col-md-4">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <ul>
+                                        <li>C#</li>
+                                        <li>JavaScript</li>
+                                        <li>HTML5</li>
+                                        <li>CSS3</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <ul>
+                                        <li>SQL</li>
+                                        <li>Java</li>
+                                        <li>Android SDK</li>
+                                        <li>Node.JS</li>
+                                    </ul>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <!-- FRAMEWORKS AND OTHER -->
+                            <h1 class="text-uppercase thin-font">Frameworks and Other Experience</h1>
+                            <hr />
+                            <div class="large thin-font">
+                                <div class="col-md-6">
+                                    <ul>
+                                        <li><i class="fa fa-check-square-o"></i>.NET 4.5</li>
+                                        <li><i class="fa fa-check-square-o"></i>MVVM</li>
+                                        <li><i class="fa fa-check-square-o"></i>MVC</li>
+                                        <li><i class="fa fa-check-square-o"></i>LINQ</li>
+                                        <li><i class="fa fa-check-square-o"></i>ASP.NET</li>
+                                        <li><i class="fa fa-check-square-o"></i>Razor Syntax</li>
+                                        <li><i class="fa fa-check-square-o"></i>Team Foundation Server (TFS)</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul>
+                                        <li><i class="fa fa-check-square-o"></i>AngularJS</li>
+                                        <li><i class="fa fa-check-square-o"></i>JQuery</li>
+                                        <li><i class="fa fa-check-square-o"></i>LESS</li>
+                                        <li><i class="fa fa-check-square-o"></i>Bootstrap</li>
+                                        <li><i class="fa fa-check-square-o"></i>Responsive Design</li>
+                                        <li><i class="fa fa-check-square-o"></i>IndexedDB</li>
+                                        <li><i class="fa fa-check-square-o"></i>Agile Development</li>
+                                        <li><i class="fa fa-check-square-o"></i>UI/UX Design</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <section id="applications">
+            <div class="background-overlay"></div>
             <div class="container-fluid">
                 <div class="container">
-                    <h2>Applications</h2>
-                    <div class="row">
+                    <h1 class="text-uppercase thin-font">Application Experience</h1>
+                    <hr />
+                    <div class="row larger thin-font">
                         <div class="col-md-6">
                             <ul>
-                                <li>Visual Studio Professional 2013</li>
-                                <li>LinqPAD</li>
-                                <li>GitHub/Git</li>
-                                <li>EclipseIDE/Android Studio</li>
+                                <li>
+                                    <img class="icon" src="Content/images/icons/ico-vs.png" /> Visual Studio Professional 2013
+                                </li>
+                                <li>
+                                    <img class="icon" src="Content/images/icons/ico-linqpad.png" /> LinqPAD
+                                </li>
+                                <li>
+                                    <img class="icon" src="Content/images/icons/ico-github.png" /> GitHub/Git
+                                </li>
+                                <li>
+                                    <img class="icon" src="Content/images/icons/ico-eclipse.png" /> EclipseIDE
+                                </li>
                             </ul>
                         </div>
                         <div class="col-md-6">
                             <ul>
-                                <li>SQL Server Management Studio</li>
-                                <li>Command Lind Interface</li>
-                                <li>TortoiseSVN</li>
+                                <li>
+                                    <img class="icon" src="Content/images/icons/ico-ssms.png" /> SQL Server Management Studio
+                                </li>
+                                <li>
+                                    <img class="icon" src="Content/images/icons/ico-cmd.png" /> Command Line Interface
+                                </li>
+                                <li>
+                                    <img class="icon" src="Content/images/icons/ico-tortoise.png" /> TortoiseSVN
+                                </li>
+                                <li>
+                                    <img class="icon" src="Content/images/icons/ico-android.png" /> Android Studio
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -216,14 +265,14 @@
                 </div>
             </div>
         </section>
-        <!--<section id="portfolio">
+        <section id="portfolio">
             <div class="container-fluid">
                 <div class="container">
                     <h2>Portfolio</h2>
                 </div>
             </div>
-        </section>-->
-        <!--<section id="education">
+        </section>
+        <section id="education">
             <div class="container-fluid">
                 <div class="container">
                     <h2>Education</h2>
@@ -246,7 +295,7 @@
                     </div>
                 </div>
             </div>
-        </section>-->
+        </section>
     </div>
     <footer></footer>
 </body>
