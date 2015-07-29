@@ -1,4 +1,7 @@
 ﻿$(function () {
+    // Wow.JS Initializer
+    new WOW().init();
+
     // For the nav-bar changing classes upon scroll
     $(window).on('scroll', function () {
         var yPosition = window.pageYOffset;
@@ -77,4 +80,18 @@
 
         changeWord();
     })
+
+    // For main section height
+    $(window).resize(function () {
+        screenHeight();
+    });
+
+    function screenHeight() {
+        
+        var windowWidth = $(window).width();
+        var windowHeight = $(window).height();
+        $('#objective, #objective .background-overlay, #objective .container-fluid').css({ 'height': windowHeight });
+    }
+
+    screenHeight();
 });
