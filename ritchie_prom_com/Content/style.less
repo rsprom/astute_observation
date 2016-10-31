@@ -29,11 +29,19 @@ hr {
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 1.5em;
+
+    @media(min-width: 768px) {
+        font-size: 2em;
+    }
 }
 
 h2 {
-    font-size: 1.625em;
+    font-size: 1.3em;
+
+    @media(min-width: 768px) {
+        font-size: 1.625em;
+    }
 }
 
 h3 {
@@ -41,7 +49,27 @@ h3 {
 }
 
 h4 {
-    font-size: 1.125em;
+    font-size: 1em;
+
+    @media(min-width: 768px) {
+        font-size: 1.125em;
+    }
+}
+
+p {
+    font-size: .9em;
+
+    @media(min-width: 768px) {
+        font-size: 1em;
+    }
+}
+
+ul {
+    font-size: .9em;
+
+    @media(min-width: 768px) {
+        font-size: 1em;
+    }
 }
 
 /* Components
@@ -127,6 +155,12 @@ h4 {
 a.active {
     background-color: @primary-color !important;
     color: #FFFFFF !important;
+}
+
+.tablet-hide {
+    @media (min-width: 768px) and (max-width: 992px) {
+        display: none;
+    }
 }
 
 /* Custom
@@ -333,14 +367,14 @@ a.button {
     color: #FFFFFF;
 
     @media only screen and (max-width: 1200px) {
-        height: 850px !important;
+        height: 650px !important;
 
         .background-overlay {
-            height: 850px !important;
+            height: 650px !important;
         }
 
         .container-fluid {
-            height: 850px !important;
+            height: 650px !important;
         }
     }
 
@@ -372,6 +406,13 @@ a.button {
 
     ul {
         list-style-type: none;
+        padding: 0;
+        font-size: .8em;
+
+        @media (min-width: 768px) {
+            padding-left: 40px;
+            font-size: 1em;
+        }
     }
 
     .icon {
@@ -414,10 +455,10 @@ a.button {
 }
 
 #portfolio {
-    height: 800px;
+    height: 1050px;
     color: #FFFFFF;
 
-    @media only screen and (max-width: 1200px) {
+    @media (min-width: 992px) {
         height: 950px !important;
 
         .background-overlay {
@@ -429,21 +470,9 @@ a.button {
         }
     }
 
-    @media only screen and (max-width: 768px) {
-        height: 1200px !important;
-
-        .background-overlay {
-            height: 1200px !important;
-        }
-
-        .container-fluid {
-            height: 1200px !important;
-        }
-    }
-
     .background-overlay {
         width: 100%;
-        height: 800px;
+        height: 1050px;
         position: absolute;
         top: 0;
         z-index: 5;
@@ -455,7 +484,7 @@ a.button {
     .container-fluid {
         position: relative;
         width: 100%;
-        height: 800px;
+        height: 1050px;
         z-index: 10;
         background: #b7b7b7; /* Old browsers */
         background: -moz-linear-gradient(left, rgba(121, 208, 173, 0.5) 0%, rgba(0, 0, 0, 0.90) 100%); /* FF3.6+ */
@@ -465,7 +494,7 @@ a.button {
         background: -ms-linear-gradient(left, rgba(121, 208, 173, 0.5) 0%,rgba(0, 0, 0, 0.90) 100%); /* IE10+ */
         background: linear-gradient(to right, rgba(121, 208, 173, 0.5) 0%,rgba(0, 0, 0, 0.90) 100%); /* W3C */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(121, 208, 173, 0.5)', endColorstr='rgba(0, 0, 0, 0.90)',GradientType=1 ); /* IE6-9 */
-        .container {
+        /*.container {
             position: relative;
             top: 50%;
             -moz-transform: translateY(-50%);
@@ -473,7 +502,7 @@ a.button {
             -o-transform: translateY(-50%);
             -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
-        }
+        }*/
     }
 
     a {
@@ -486,6 +515,10 @@ a.button {
         @media only screen and (max-width: 1200px) {
             padding: 10px;
         }
+
+        @media (min-width: 992px) {
+            min-height: 200px;
+        }
     }
 
     .project:nth-child(1) {
@@ -494,7 +527,7 @@ a.button {
         }
     }
 
-    .project:nth-child(2), .project:nth-child(3), .project:nth-child(4) {
+    .project:not(:first-child) {
         @media only screen and (max-width: 992px) {
             border-top: 1px solid #e0e0e0;
         }
@@ -510,8 +543,13 @@ a.button {
 
 section .container-fluid {
     height: 60%;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    @media (min-width: 768px) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
 }
 
 footer {
@@ -524,10 +562,13 @@ footer {
 }
 /* Bootstrap Overrides
 ================================================= */
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border: none;
+}
+
 .navbar-default {
-    border-color: #e7e7e7;
+    border: none;
     background-color: transparent;
-    border: 0;
     font-size: 20px;
     -moz-transition: background-color .2s linear;
     -o-transition: background-color .2s linear;
@@ -544,6 +585,12 @@ footer {
     .navbar-brand {
         color: #000000;
         background-color: @primary-color;
+
+        @media (min-width: 768px) and (max-width: 992px) {
+            &.largest {
+                font-size: 1.3em !important;
+            }
+        }
     }
 
     .navbar-nav > li > a {
@@ -569,6 +616,14 @@ footer {
     @media only screen and (max-width: 767px) {
         background-color: rgba(0, 0, 0, 0.49);
         font-size: .7em;
+    }
+
+    @media (min-width: 768px) {
+        font-size: .7em;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 1em;
     }
 }
 
